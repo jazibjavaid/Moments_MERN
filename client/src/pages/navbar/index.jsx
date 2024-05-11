@@ -40,8 +40,8 @@ const Navbar = () => {
     const primaryLight = theme.palette.primary.light;
     const alt = theme.palette.background.alt;
 
-   // const fullName = `${user.firstName} ${user.lastName}`; 
-   const fullName = "Jason";
+    const fullName = `${user.firstName} ${user.lastName}`; 
+   //const fullName = "Jason";
     return <FlexBetween padding="1rem 6%" backgroundColor = {alt}>
         <FlexBetween gap="1.75rem">
             <Typography
@@ -93,7 +93,14 @@ const Navbar = () => {
                             backgroundColor: neutralLight,
                             width: "150px",
                             borderRadius: "0.25rem",
-                            p: "0.25rem 1rem"
+                            p: "0.25rem 1rem",
+                            "& .MuiSvgIcon-root": {
+                                pr: "0.25rem",
+                                width: "3rem"
+                            },
+                            "& .MuiSelect-select:focus": {
+                                backgroundColor: neutralLight
+                            }
                         }}
                         input={<InputBase />}  
                         >
